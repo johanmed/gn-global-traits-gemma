@@ -1,0 +1,291 @@
+[
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD100", 
+    "sample_name_2": "BXD100", 
+    "se": 0.448, 
+    "value": 8.91
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD101", 
+    "sample_name_2": "BXD101", 
+    "value": 9.009
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD43", 
+    "sample_name_2": "BXD43", 
+    "se": 0.081, 
+    "value": 8.723
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD44", 
+    "sample_name_2": "BXD44", 
+    "se": 0.117, 
+    "value": 9.041
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD45", 
+    "sample_name_2": "BXD45", 
+    "se": 0.086, 
+    "value": 8.908
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD48", 
+    "sample_name_2": "BXD48", 
+    "se": 0.375, 
+    "value": 9.248
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD48a", 
+    "sample_name_2": "BXD96", 
+    "se": 0.496, 
+    "value": 9.449
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD49", 
+    "sample_name_2": "BXD49", 
+    "se": 0.194, 
+    "value": 9.292
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD50", 
+    "sample_name_2": "BXD50", 
+    "value": 8.767
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD51", 
+    "sample_name_2": "BXD51", 
+    "se": 0.038, 
+    "value": 8.977
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD55", 
+    "sample_name_2": "BXD55", 
+    "se": 0.023, 
+    "value": 8.896
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD56", 
+    "sample_name_2": "BXD56", 
+    "se": 0.41, 
+    "value": 8.982
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD60", 
+    "sample_name_2": "BXD60", 
+    "value": 9.25
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD61", 
+    "sample_name_2": "BXD61", 
+    "se": 0.017, 
+    "value": 8.973
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD62", 
+    "sample_name_2": "BXD62", 
+    "se": 0.353, 
+    "value": 9.16
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD63", 
+    "sample_name_2": "BXD63", 
+    "se": 0.071, 
+    "value": 9.414
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD64", 
+    "sample_name_2": "BXD64", 
+    "se": 0.015, 
+    "value": 9.676
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD65", 
+    "sample_name_2": "BXD65", 
+    "se": 0.045, 
+    "value": 9.562
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD65a", 
+    "sample_name_2": "BXD97", 
+    "se": 0.095, 
+    "value": 9.451
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD65b", 
+    "sample_name_2": "BXD92", 
+    "value": 9.286
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD66", 
+    "sample_name_2": "BXD66", 
+    "se": 0.469, 
+    "value": 8.872
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD68", 
+    "sample_name_2": "BXD68", 
+    "se": 0.172, 
+    "value": 8.898
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD69", 
+    "sample_name_2": "BXD69", 
+    "se": 0.059, 
+    "value": 9.828
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD70", 
+    "sample_name_2": "BXD70", 
+    "se": 0.223, 
+    "value": 9.65
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD71", 
+    "sample_name_2": "BXD71", 
+    "se": 0.652, 
+    "value": 9.396
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD73", 
+    "sample_name_2": "BXD73", 
+    "se": 0.107, 
+    "value": 9.289
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD73a", 
+    "sample_name_2": "BXD80", 
+    "se": 0.308, 
+    "value": 9.087
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD73b", 
+    "sample_name_2": "BXD103", 
+    "se": 0.227, 
+    "value": 9.108
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD75", 
+    "sample_name_2": "BXD75", 
+    "se": 0.213, 
+    "value": 9.31
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD79", 
+    "sample_name_2": "BXD79", 
+    "se": 0.019, 
+    "value": 9.246
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD81", 
+    "sample_name_2": "BXD81", 
+    "se": 0.52, 
+    "value": 9.0
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD83", 
+    "sample_name_2": "BXD83", 
+    "se": 0.031, 
+    "value": 9.494
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD84", 
+    "sample_name_2": "BXD84", 
+    "se": 0.293, 
+    "value": 9.488
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD85", 
+    "sample_name_2": "BXD85", 
+    "se": 0.008, 
+    "value": 9.713
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD87", 
+    "sample_name_2": "BXD87", 
+    "se": 0.099, 
+    "value": 9.353
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD89", 
+    "sample_name_2": "BXD89", 
+    "se": 0.051, 
+    "value": 8.717
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD90", 
+    "sample_name_2": "BXD90", 
+    "se": 0.006, 
+    "value": 9.73
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD95", 
+    "sample_name_2": "BXD95", 
+    "value": 9.054
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD98", 
+    "sample_name_2": "BXD98", 
+    "se": 0.107, 
+    "value": 8.749
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "BXD99", 
+    "sample_name_2": "BXD99", 
+    "se": 0.363, 
+    "value": 9.512
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "C57BL/6J", 
+    "sample_name_2": "C57BL/6J", 
+    "se": 0.052, 
+    "value": 9.22
+  }, 
+  {
+    "data_id": 56328510, 
+    "sample_name": "DBA/2J", 
+    "sample_name_2": "DBA/2J", 
+    "se": 0.147, 
+    "value": 8.987
+  }
+]
