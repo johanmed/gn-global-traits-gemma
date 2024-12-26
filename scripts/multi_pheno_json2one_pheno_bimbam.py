@@ -50,6 +50,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
     
     for a in container:
         if a[0] in bimbam2_contents:
+        
             bimbam1=open(bimbam_filename, 'w')
             
             old_string=(re.search(f'{a[0]}.*\n', bimbam2_contents).group())[:-1]
@@ -57,12 +58,14 @@ def process_json_bimbam(json_filename, bimbam_filename):
             new_string=bimbam2_contents.replace(old_string, f'{old_string}, {a[1]}')
             #print('new string is ', new_string)
             
-            bimbam1.write(f'{new_string}\n')
+            bimbam1.write(f'{new_string}')
             bimbam1.close()
             
-        bimbam1=open(bimbam_filename, 'a')
-        bimbam1.write(f'{a[0]}, {a[1]}\n')
-        bimbam1.close()
+        else:
+            
+            bimbam1=open(bimbam_filename, 'a')
+            bimbam1.write(f'{a[0]}, {a[1]}\n')
+            bimbam1.close()
     
 
 def contains_phenotype_data(json_filename):
