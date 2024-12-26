@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd ../processed_data/rqtl2_geno_pheno_datasets # change directory to save easily zip files
+
+for i in {1..5661}; do
+	dataset_id=$(cut -d, -f1 ../list_dataset_name_trait_id.csv | tail -n +3 | head -n $i | tail -n 1)
+	curl -O https://genenetwork.org/api/v_pre1/genotypes/rqtl2/BXD/${dataset_id}.zip
+	unzip ${dataset_id}.zip -d ${dataset_id}
+	rm ${dataset_id}.zip 
+done
