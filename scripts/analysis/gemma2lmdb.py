@@ -51,11 +51,10 @@ with lmdb.open(args.db,subdir=False) as env:
                             chr = int(chr)
                         chr_c = pack('c', bytes([chr]))
                         key = pack('>cLfff', chr_c, int(pos), float(se), float(l_mle), float(p_lrt))
-                        test_chr_c, test_pos, se, l_mle, p_lrt = unpack('>cLfff', key)
-                        test_chr = unpack('c', test_chr_c)
-                        val = pack('=fffffff', float(af), float(beta), float(se), float(l_mle), float(p_lrt), float(desc), bytes(full_desc)) 
+                        val = pack('=fffffB100s', float(af), float(beta), float(se), float(l_mle), float(p_lrt), int(desc), bytes(full_desc, encoding='utf-8')) 
                         res = txn.put(key, bytes(val), dupdata=False, overwrite=False)
-                        if res == 0:
+                        print('insertion return value is', res)
+                        if res:
                             if float(p_lrt) > 2.0:
                                 hits.append([chr, int(pos), rs, p_lrt])
                         else:
@@ -63,15 +62,18 @@ with lmdb.open(args.db,subdir=False) as env:
     with env.begin() as txn:
         with txn.cursor() as curs:
             # quick check and output of keys
-            for (key, value) in list(curs.iternext()):
+            for (key, val) in list(curs.iternext()):
                 if key==b'meta':
                     continue
                 else:
-                    test_chr_c, test_pos, se, l_mle, p_lrt = unpack('>cLfff', key)
-                    chr=unpack('c', test_chr_c)
-                    af, beta, se, l_mle, p_lrt, desc, full_desc= unpack('=fffffff', value)
-                    if desc != 1.0:
-                        #print(desc)
+                    chr_c, pos, se, l_mle, p_lrt = unpack('>cLfff', key)
+                    b_chr=unpack('c', chr_c)
+                    chr=ord(b_chr)
+                    #print('chromosome read is ', chr)
+                    af, beta, se, l_mle, p_lrt, desc, b_full_desc= unpack('=fffffB100s', val)
+                    full_desc=b_full_desc.decode('utf-8').strip('\x00')
+                    #print('trait category read is ', desc)
+                    #print('trait description read is ', full_desc)
 
     meta["hits"] = hits
     meta["log"] = log
