@@ -2,11 +2,12 @@
 
 import pandas as pd
 
+# Apply series of modifications to project_phenotype_file.bimbam to make it contain the same lines as project_genotype_file.bimbam
 
 
-# 1. Handle reading the file since it is not well formatted as csv
+# 1. Handle reading of files
 
-f=open('../processed_data/project_phenotype_file.bimbam')
+f=open('../../processed_data/project_phenotype_file.bimbam')
 
 read_lines=f.readlines()
 
@@ -41,6 +42,8 @@ for x in read_lines:
 ori_pheno=pd.DataFrame(container)
 #print('Original phenotype: \n', ori_pheno.head())
 
+ori_geno=pd.read_csv('../processed_data/sample_BXD_genotype_file.csv', index_col=0)
+#print('Original genotype: \n', ori_geno.head())
 
 
 # 2. Remove lines in phenotype file not in genotype file
@@ -48,8 +51,6 @@ ori_pheno=pd.DataFrame(container)
 ori_pheno_transposed=ori_pheno.transpose(copy=True) # transpose dataframe to have lines on the rows
 #print('Transposed phenotype file: \n', ori_pheno_transposed.head())
 
-ori_geno=pd.read_csv('../processed_data/sample_BXD_genotype_file.csv', index_col=0)
-#print('Original genotype: \n', ori_geno.head())
 
 list_lines_pheno=ori_pheno_transposed.index # get labels
 #print('Lines phenotype file: ', list_lines_pheno)
@@ -96,4 +97,4 @@ for e, l in enumerate(list_lines_geno):
     
 final_transposed=final.transpose(copy=True)
 #print('Final transposed: \n', final_transposed.head())
-final_transposed.to_csv('../processed_data/project_trimmed_phenotype_file.bimbam', header=False, index=False) # save data in file
+final_transposed.to_csv('../../processed_data/project_trimmed_phenotype_file.bimbam', header=False, index=False) # save data in file

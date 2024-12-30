@@ -5,7 +5,7 @@
 import os
 import re
 
-list_json_files=[os.path.join('../processed_data/json_files', file) for file in os.listdir('../processed_data/json_files') if 'pheno' in file]
+list_json_files=[os.path.join('../../processed_data/json_files', file) for file in os.listdir('../../processed_data/json_files') if 'pheno' in file]
 
 
 def process_json_bimbam(json_filename, bimbam_filename):
@@ -87,6 +87,6 @@ for jsonf in list_json_files:
     #print(f'Processing {jsonf}')
     if contains_phenotype_data(jsonf):
         #print(f'File {jsonf} contains data and can go for actual processing')
-        process_json_bimbam(jsonf, '../processed_data/project_phenotype_file.bimbam')
+        process_json_bimbam(jsonf, '../../processed_data/project_phenotype_file.bimbam')
     
 

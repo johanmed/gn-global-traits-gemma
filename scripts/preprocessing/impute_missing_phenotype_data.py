@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
+# Impute missing values in project_prepared_phenotype_data.bimbam
+
+
 import pandas as pd
 import numpy as np
 
-trimmed_BXD_data=pd.read_csv('../data/no_x_TrimmedBXDPublish.csv')
+trimmed_BXD_data=pd.read_csv('../../processed_data/project_prepared_phenotype_data.bimbam')
 trimmed_data=trimmed_BXD_data.copy()
 
 print(trimmed_data[:5])
@@ -28,5 +31,5 @@ def impute_missing_dataset(dataset):
     return imputed_data
 
 imputed_BXD_data=impute_missing_dataset(trimmed_data)
-imputed_BXD_data.to_csv("../data/ImputedBXDPublish.csv", index=False)
+imputed_BXD_data.to_csv("../../processed_data/project_imputed_phenotype_file.bimbam", index=False)
 
