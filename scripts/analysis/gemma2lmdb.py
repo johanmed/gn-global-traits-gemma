@@ -51,7 +51,7 @@ with lmdb.open(args.db,subdir=False) as env:
                             chr = int(chr)
                         chr_c = pack('c', bytes([chr]))
                         key = pack('>cLfff', chr_c, int(pos), float(se), float(l_mle), float(p_lrt))
-                        val = pack('=fffffB100s', float(af), float(beta), float(se), float(l_mle), float(p_lrt), int(desc), bytes(full_desc, encoding='utf-8')) 
+                        val = pack('=fffffB100s', float(af), float(beta), float(se), float(l_mle), float(p_lrt), int(desc), bytes(full_desc, encoding='utf-8')) # Number of bytes of full_desc set to 100 by default
                         res = txn.put(key, bytes(val), dupdata=False, overwrite=False)
                         print('insertion return value is', res)
                         if res:
@@ -68,7 +68,7 @@ with lmdb.open(args.db,subdir=False) as env:
                 else:
                     chr_c, pos, se, l_mle, p_lrt = unpack('>cLfff', key)
                     b_chr=unpack('c', chr_c)
-                    chr=ord(b_chr)
+                    chr_num=ord(b_chr)
                     #print('chromosome read is ', chr)
                     af, beta, se, l_mle, p_lrt, desc, b_full_desc= unpack('=fffffB100s', val)
                     full_desc=b_full_desc.decode('utf-8').strip('\x00')
