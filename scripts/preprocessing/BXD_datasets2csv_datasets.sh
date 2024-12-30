@@ -4,7 +4,7 @@
 
 cd ../../raw_data/global_search_datasets/
 
-for i in ./*
+for i in *
 do
-	tail -n +5 $i | cut -d, -f 5,6 > trimmed_$i
+	tail -n +6 $i | cut -d, -f 5,6 > trimmed_$i
 done
