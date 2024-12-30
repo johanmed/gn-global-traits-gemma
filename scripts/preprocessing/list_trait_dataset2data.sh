@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Use trait and dataset ids and GNApi to fetch phenotype json files (phenotype data)
+# Use trait and dataset ids and GNApi to fetch phenotype json files (phenotype data), after generation of concatenated with no duplicate BXD dataset
 
 for i in {1..5661}; do
 	dataset_id=$(cut -d, -f1 ../../processed_data/list_dataset_name_trait_id.csv | tail -n +3 | head -n $i | tail -n 1)

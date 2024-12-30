@@ -20,6 +20,6 @@ for csv in list_csv_files:
             
 new_container=pd.DataFrame(container)
 
-container.to_csv('../../raw_data/concatenated_no_duplicate_BXD_dataset.csv', header=False, index=False)
+new_container.to_csv('../../processed_data/list_dataset_name_trait_id.csv', header=False, index=False)
 
 

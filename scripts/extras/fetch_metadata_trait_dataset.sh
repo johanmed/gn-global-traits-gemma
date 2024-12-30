@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Extract metadata of each phenotype using trait id and dataset id and GNApi
+# Extract metadata of each phenotype using trait id and dataset id and GNApi, after generation of concatenated with no duplicate BXD dataset
 
 for i in {1..5661}; do
         dataset_id=$(cut -d, -f1 ../../processed_data/list_dataset_name_trait_id.csv | tail -n +3 | head -n $i | tail -n 1)
