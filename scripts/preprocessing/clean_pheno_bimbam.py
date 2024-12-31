@@ -33,7 +33,8 @@ for x in read_lines:
     for z in y[1:]:
         if y[0] not in container.keys():
             container[y[0]]=[]
-        container[y[0]].append(float(z))
+        else:
+            container[y[0]].append(float(z))
     for rem in range(num_columns-len(y)):
         container[y[0]].append('x')
 
@@ -42,7 +43,7 @@ for x in read_lines:
 ori_pheno=pd.DataFrame(container)
 #print('Original phenotype: \n', ori_pheno.head())
 
-ori_geno=pd.read_csv('../processed_data/sample_BXD_genotype_file.csv', index_col=0)
+ori_geno=pd.read_csv('../../processed_data/sample_BXD_genotype_file.csv', index_col=0)
 #print('Original genotype: \n', ori_geno.head())
 
 
@@ -56,7 +57,7 @@ list_lines_pheno=ori_pheno_transposed.index # get labels
 #print('Lines phenotype file: ', list_lines_pheno)
 
 list_lines_geno=ori_geno.index # same
-print('Lines genotype file: ', list_lines_geno)
+#print('Lines genotype file: ', list_lines_geno)
 
 diff_to_remove=[]
 for i in list_lines_pheno:
