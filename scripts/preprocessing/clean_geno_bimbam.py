@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Script 6a
+
 # Apply some series of modifications to transpose genotype file and format it as rows=markers and columns=lines as expected by gemma
 
 import pandas as pd

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Script 1
+
 # Extract only the lines of the datasets files containing comma separated values
 
 cd ../../raw_data/global_search_datasets/

@@ -1,3 +1,5 @@
+Trait id: 109.0658001_MZ
+Dataset id : EPFL-LISP_MusPMetHFD1213
 
 <!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -444,7 +446,7 @@
 <div class="form-group has-error">
   <div class="control-label" for="inputError1">
 
-    <img src="/static/gif/error/animated-gifs-stickmen-012.gif">
+    <img src="/static/gif/error/animated-gifs-smileys-211.gif">
 
     <h1>ERROR</h1>
 
@@ -487,7 +489,7 @@
   <a href="#Stack" class="btn btn-default" data-toggle="collapse">Toggle full stack trace</a>
   <div id="Stack" class="collapse">
     <pre>
-      GeneNetwork 3.12-rc1  http://genenetwork.org/api/v_pre1/sample_data/EPFL-LISP_MusPMetHFD1213/109.0658001_MZ ( 9:56PM UTC Dec 30, 2024) 
+      GeneNetwork 3.12-rc1  http://genenetwork.org/api/v_pre1/sample_data/EPFL-LISP_MusPMetHFD1213/109.0658001_MZ ( 2:24PM UTC Dec 31, 2024) 
 Traceback (most recent call last):
   File &#34;/home/zas1024/opt/gn-latest-20241213/lib/python3.10/site-packages/flask/app.py&#34;, line 1523, in full_dispatch_request
     rv = self.dispatch_request()
@@ -576,7 +578,7 @@ IndexError: tuple index out of range
                             <small>GeneNetwork 3.12-rc1</small>
                         </p>
                     
-                    <p>It took the server 0.06125s seconds to process this page.</p>
+                    <p>It took the server 0.12050s seconds to process this page.</p>
                 </div>
                 <div class="col-xs-2">
                     <a href="http://www.python.org/" target="_blank">

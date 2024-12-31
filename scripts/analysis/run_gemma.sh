@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Script 9
+
 # Perform LMM analysis using gemma
 
 # Run gemma to generate relatedness matrix

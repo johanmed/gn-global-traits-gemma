@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#Script 4
+
 # Process json phenotype files and create a single bimbam phenotype file where phenotype values of a given trait are added as a different column
 
 import os
@@ -18,10 +20,14 @@ def process_json_bimbam(json_filename, bimbam_filename):
     json=open(json_filename)
     json_contents=json.readlines()
     json.close()
-        
+    
+    intro1, trait=json_contents[0].split(':')
+    intro2, dataset=json_contents[1].split(':')
+    trait_dataset=trait.strip(' ')+'_'+dataset.strip(' ')
+    
     container=[]
     
-    for (x,y) in enumerate(json_contents):
+    for (x,y) in enumerate(json_contents[2:]): # first 2 lines skipped since hold trait and dataset ids
     
         strain_found=re.search('sample_name_2', y)
         
@@ -55,7 +61,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
             
             old_string=(re.search(f'{a[0]}.*\n', bimbam2_contents).group())[:-1]
             #print('old string is ', old_string)
-            new_string=bimbam2_contents.replace(old_string, f'{old_string}, {a[1]}')
+            new_string=bimbam2_contents.replace(old_string, f'{old_string}, {trait_dataset}:{a[1]}')
             #print('new string is ', new_string)
             
             bimbam1.write(f'{new_string}')
@@ -64,7 +70,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
         else:
             
             bimbam1=open(bimbam_filename, 'a')
-            bimbam1.write(f'{a[0]}, {a[1]}\n')
+            bimbam1.write(f'{a[0]}, {trait_dataset}:{a[1]}\n')
             bimbam1.close()
     
 

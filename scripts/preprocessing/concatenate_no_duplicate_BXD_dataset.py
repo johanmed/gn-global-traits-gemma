@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Script 2
+
 # Remove duplicates from raw and concatenate dataset files into a single file, after making the file contents 100% comma separated
 
 import os

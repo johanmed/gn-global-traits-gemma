@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Script 5 (but can be skipped)
+
 # Get rqtl2 bundles of some datasets related to the project to compare genotype files to build a common genotype file and phenotype file
 
 cd ../../processed_data/sample_rqtl2_geno_pheno_datasets # change directory to save easily zip files
