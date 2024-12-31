@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Script 10
+# Script 9
 
 # Make gemma association files compatible with gemma2lmdb script because of version of gemma used, after gemma run
 

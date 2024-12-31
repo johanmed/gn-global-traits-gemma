@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Script 9
+# Script 8
 
 # Perform LMM analysis using gemma
 

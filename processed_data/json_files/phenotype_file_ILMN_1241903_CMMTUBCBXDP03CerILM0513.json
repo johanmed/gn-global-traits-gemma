@@ -1,0 +1,71 @@
+Trait id: ILMN_1241903
+Dataset id : CMMTUBCBXDP03CerILM0513
+[
+  {
+    "data_id": 59099258, 
+    "sample_name": "B6D2F1", 
+    "sample_name_2": "B6D2F1", 
+    "se": 0.114, 
+    "value": 6.876
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "se": 0.16, 
+    "value": 6.611
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD15", 
+    "sample_name_2": "BXD15", 
+    "value": 6.717
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD33", 
+    "sample_name_2": "BXD33", 
+    "se": 0.061, 
+    "value": 6.804
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD34", 
+    "sample_name_2": "BXD34", 
+    "se": 0.136, 
+    "value": 6.838
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.037, 
+    "value": 6.921
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "se": 0.153, 
+    "value": 6.774
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD5", 
+    "sample_name_2": "BXD5", 
+    "value": 6.817
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "se": 0.138, 
+    "value": 7.074
+  }, 
+  {
+    "data_id": 59099258, 
+    "sample_name": "D2B6F1", 
+    "sample_name_2": "D2B6F1", 
+    "value": 6.814
+  }
+]

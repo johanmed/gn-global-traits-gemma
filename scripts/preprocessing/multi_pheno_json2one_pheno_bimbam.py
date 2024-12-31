@@ -27,7 +27,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
     
     container=[]
     
-    for (x,y) in enumerate(json_contents[2:]): # first 2 lines skipped since hold trait and dataset ids
+    for (x,y) in enumerate(json_contents):
     
         strain_found=re.search('sample_name_2', y)
         
@@ -41,12 +41,13 @@ def process_json_bimbam(json_filename, bimbam_filename):
             
             if not (value_found1==None):
                 value_extract="".join(char for char in value_found1.string[-10:-1] if char.isdigit() or char=='.')
+                #print('value extract is ', value_extract)
+                container.append([strain_extract, value_extract])
+                
             elif not(value_found2==None):
                 value_extract="".join(char for char in value_found2.string[-10:-1] if char.isdigit() or char=='.')
-                
-            #print('value extract is ', value_extract)
-            
-            container.append([strain_extract, value_extract])
+                #print('value extract is ', value_extract)
+                container.append([strain_extract, value_extract])
     
     #print('container is ', container)
     
@@ -81,8 +82,10 @@ def contains_phenotype_data(json_filename):
     
     f=open(json_filename)
     line1=f.readline()
+    line2=f.readline()
+    line3=f.readline()
     f.close()
-    if line1.startswith('['):
+    if line3.startswith('['):
         return True
     else:
         return False

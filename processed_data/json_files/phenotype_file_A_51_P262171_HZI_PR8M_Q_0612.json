@@ -1,0 +1,81 @@
+Trait id: A_51_P262171
+Dataset id : HZI_PR8M_Q_0612
+[
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD1", 
+    "sample_name_2": "BXD1", 
+    "se": 0.0576076, 
+    "value": 13.0178
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD14", 
+    "sample_name_2": "BXD14", 
+    "se": 0.0787134, 
+    "value": 13.3396
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD16", 
+    "sample_name_2": "BXD16", 
+    "se": 0.0606484, 
+    "value": 13.1615
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD24a", 
+    "sample_name_2": "BXD24a", 
+    "se": 0.057883, 
+    "value": 13.0074
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD31", 
+    "sample_name_2": "BXD31", 
+    "se": 0.0936419, 
+    "value": 13.0143
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD32", 
+    "sample_name_2": "BXD32", 
+    "se": 0.436906, 
+    "value": 12.3549
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.0673693, 
+    "value": 12.426
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD48a", 
+    "sample_name_2": "BXD96", 
+    "se": 0.273993, 
+    "value": 12.4639
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD60", 
+    "sample_name_2": "BXD60", 
+    "se": 0.1262, 
+    "value": 12.7993
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD75", 
+    "sample_name_2": "BXD75", 
+    "se": 0.0958697, 
+    "value": 13.3426
+  }, 
+  {
+    "data_id": 52145020, 
+    "sample_name": "BXD8", 
+    "sample_name_2": "BXD8", 
+    "se": 0.147146, 
+    "value": 12.5809
+  }
+]

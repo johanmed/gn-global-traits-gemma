@@ -1,0 +1,105 @@
+Trait id: ILMN_1220700
+Dataset id : CMMTUBCBXDG15CerILM0513
+[
+  {
+    "data_id": 59279727, 
+    "sample_name": "B6D2F1", 
+    "sample_name_2": "B6D2F1", 
+    "se": 0.011, 
+    "value": 8.122
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD11", 
+    "sample_name_2": "BXD11", 
+    "value": 7.849
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "value": 7.552
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD20", 
+    "sample_name_2": "BXD20", 
+    "value": 7.679
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD21", 
+    "sample_name_2": "BXD21", 
+    "se": 0.033, 
+    "value": 7.627
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD27", 
+    "sample_name_2": "BXD27", 
+    "se": 0.166, 
+    "value": 7.724
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD32", 
+    "sample_name_2": "BXD32", 
+    "value": 7.758
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD33", 
+    "sample_name_2": "BXD33", 
+    "se": 0.213, 
+    "value": 7.944
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD34", 
+    "sample_name_2": "BXD34", 
+    "se": 0.12, 
+    "value": 7.706
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD38", 
+    "sample_name_2": "BXD38", 
+    "se": 0.136, 
+    "value": 7.717
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.182, 
+    "value": 7.863
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "se": 0.029, 
+    "value": 8.13
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD42", 
+    "sample_name_2": "BXD42", 
+    "se": 0.187, 
+    "value": 7.736
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "se": 0.111, 
+    "value": 7.952
+  }, 
+  {
+    "data_id": 59279727, 
+    "sample_name": "BXD8", 
+    "sample_name_2": "BXD8", 
+    "se": 0.041, 
+    "value": 7.63
+  }
+]

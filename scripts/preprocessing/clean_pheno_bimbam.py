@@ -81,7 +81,7 @@ ori_pheno_trimmed=ori_pheno.drop(axis=0, labels=diff_to_remove) # remove lines n
 diff_to_add={}
 for j in list_lines_geno:
     if j not in list_lines_pheno:
-        diff_to_add[j]=['x' for rem in range(19542)] # default number of phenotypes in file is 19542
+        diff_to_add[j]=[0 for rem in range(19542)] # default number of phenotypes in file is 19542
 #print('Lines to add: ', diff_to_add.keys())
         
 lines_to_add=pd.DataFrame(diff_to_add)

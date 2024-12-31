@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Script 12
+# Script 11
 
 # Create vector database after addition of trait category and full description
 

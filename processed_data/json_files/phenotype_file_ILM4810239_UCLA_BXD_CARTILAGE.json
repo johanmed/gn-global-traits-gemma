@@ -1,0 +1,88 @@
+Trait id: ILM4810239
+Dataset id : UCLA_BXD_CARTILAGE
+[
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD1", 
+    "sample_name_2": "BXD1", 
+    "value": 7.93
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "value": 7.99024
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD16", 
+    "sample_name_2": "BXD16", 
+    "value": 7.94649
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD19", 
+    "sample_name_2": "BXD19", 
+    "value": 8.01909
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD2", 
+    "sample_name_2": "BXD2", 
+    "value": 8.00426
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD24", 
+    "sample_name_2": "BXD24", 
+    "value": 7.95349
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD27", 
+    "sample_name_2": "BXD27", 
+    "value": 8.04745
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD28", 
+    "sample_name_2": "BXD28", 
+    "value": 8.01918
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD32", 
+    "sample_name_2": "BXD32", 
+    "value": 7.97875
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "value": 8.00682
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "value": 8.02006
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD42", 
+    "sample_name_2": "BXD42", 
+    "value": 7.98871
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "value": 8.03568
+  }, 
+  {
+    "data_id": 35202191, 
+    "sample_name": "DBA/2J", 
+    "sample_name_2": "DBA/2J", 
+    "value": 8.0397
+  }
+]

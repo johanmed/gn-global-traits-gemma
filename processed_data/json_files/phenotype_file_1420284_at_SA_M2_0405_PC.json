@@ -1,0 +1,206 @@
+Trait id: 1420284_at
+Dataset id : SA_M2_0405_PC
+[
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD1", 
+    "sample_name_2": "BXD1", 
+    "se": 0.201, 
+    "value": 8.054
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD11", 
+    "sample_name_2": "BXD11", 
+    "value": 7.814
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "value": 7.914
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD13", 
+    "sample_name_2": "BXD13", 
+    "value": 7.562
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD14", 
+    "sample_name_2": "BXD14", 
+    "value": 7.824
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD15", 
+    "sample_name_2": "BXD15", 
+    "se": 0.064, 
+    "value": 7.894
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD16", 
+    "sample_name_2": "BXD16", 
+    "se": 0.154, 
+    "value": 7.99
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD18", 
+    "sample_name_2": "BXD18", 
+    "se": 0.123, 
+    "value": 8.021
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD19", 
+    "sample_name_2": "BXD19", 
+    "value": 8.056
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD2", 
+    "sample_name_2": "BXD2", 
+    "se": 0.17, 
+    "value": 7.907
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD20", 
+    "sample_name_2": "BXD20", 
+    "value": 7.733
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD21", 
+    "sample_name_2": "BXD21", 
+    "se": 0.018, 
+    "value": 7.845
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD22", 
+    "sample_name_2": "BXD22", 
+    "value": 7.999
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD24", 
+    "sample_name_2": "BXD24", 
+    "value": 8.023
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD27", 
+    "sample_name_2": "BXD27", 
+    "value": 7.771
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD28", 
+    "sample_name_2": "BXD28", 
+    "value": 7.818
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD29", 
+    "sample_name_2": "BXD29", 
+    "se": 0.064, 
+    "value": 7.685
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD31", 
+    "sample_name_2": "BXD31", 
+    "se": 0.052, 
+    "value": 7.697
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD32", 
+    "sample_name_2": "BXD32", 
+    "value": 7.98
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD33", 
+    "sample_name_2": "BXD33", 
+    "se": 0.04, 
+    "value": 7.86
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD34", 
+    "sample_name_2": "BXD34", 
+    "se": 0.04, 
+    "value": 7.968
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD38", 
+    "sample_name_2": "BXD38", 
+    "se": 0.163, 
+    "value": 7.869
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.103, 
+    "value": 7.982
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "se": 0.155, 
+    "value": 8.022
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD42", 
+    "sample_name_2": "BXD42", 
+    "se": 0.062, 
+    "value": 7.681
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD5", 
+    "sample_name_2": "BXD5", 
+    "se": 0.374, 
+    "value": 7.575
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "value": 7.635
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD8", 
+    "sample_name_2": "BXD8", 
+    "se": 0.135, 
+    "value": 8.117
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "BXD9", 
+    "sample_name_2": "BXD9", 
+    "value": 8.037
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "C57BL/6J", 
+    "sample_name_2": "C57BL/6J", 
+    "value": 7.81
+  }, 
+  {
+    "data_id": 14423822, 
+    "sample_name": "DBA/2J", 
+    "sample_name_2": "DBA/2J", 
+    "value": 7.641
+  }
+]

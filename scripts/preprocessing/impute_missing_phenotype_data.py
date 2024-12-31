@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Script 8
+# Script 7
 
 # Impute missing values in project_prepared_phenotype_data.bimbam
 
@@ -8,7 +8,7 @@
 import pandas as pd
 import numpy as np
 
-trimmed_BXD_data=pd.read_csv('../../processed_data/project_prepared_phenotype_file.bimbam', header=None)
+trimmed_BXD_data=pd.read_csv('../../processed_data/project_fully_trimmed_phenotype_file.bimbam', header=None)
 trimmed_data=trimmed_BXD_data.copy()
 
 #print('trimmed data looks like \n', trimmed_data[:5])
@@ -20,7 +20,7 @@ f1.close()
 from sklearn.impute import KNNImputer
 
 def impute_missing_column(column_data):
-    imputer=KNNImputer(missing_values=0) 
+    imputer=KNNImputer(missing_values=0.0) 
     return imputer.fit_transform(column_data)
 
     

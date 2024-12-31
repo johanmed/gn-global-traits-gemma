@@ -1,0 +1,58 @@
+Trait id: ILMN_2768026
+Dataset id : CMMTUBCBXDP09CerILM0513
+[
+  {
+    "data_id": 59187458, 
+    "sample_name": "B6D2F1", 
+    "sample_name_2": "B6D2F1", 
+    "se": 0.156, 
+    "value": 7.394
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "se": 0.078, 
+    "value": 7.86
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD33", 
+    "sample_name_2": "BXD33", 
+    "se": 0.104, 
+    "value": 7.389
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD34", 
+    "sample_name_2": "BXD34", 
+    "se": 0.069, 
+    "value": 7.61
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.144, 
+    "value": 7.926
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "se": 0.107, 
+    "value": 7.625
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "value": 7.51
+  }, 
+  {
+    "data_id": 59187458, 
+    "sample_name": "D2B6F1", 
+    "sample_name_2": "D2B6F1", 
+    "value": 7.786
+  }
+]

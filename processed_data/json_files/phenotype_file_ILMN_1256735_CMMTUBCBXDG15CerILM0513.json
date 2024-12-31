@@ -1,0 +1,105 @@
+Trait id: ILMN_1256735
+Dataset id : CMMTUBCBXDG15CerILM0513
+[
+  {
+    "data_id": 59278023, 
+    "sample_name": "B6D2F1", 
+    "sample_name_2": "B6D2F1", 
+    "se": 0.193, 
+    "value": 8.094
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD11", 
+    "sample_name_2": "BXD11", 
+    "value": 8.05
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD12", 
+    "sample_name_2": "BXD12", 
+    "value": 7.866
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD20", 
+    "sample_name_2": "BXD20", 
+    "value": 8.388
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD21", 
+    "sample_name_2": "BXD21", 
+    "se": 0.2, 
+    "value": 7.96
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD27", 
+    "sample_name_2": "BXD27", 
+    "se": 0.024, 
+    "value": 8.061
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD32", 
+    "sample_name_2": "BXD32", 
+    "value": 8.117
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD33", 
+    "sample_name_2": "BXD33", 
+    "se": 0.196, 
+    "value": 8.212
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD34", 
+    "sample_name_2": "BXD34", 
+    "se": 0.012, 
+    "value": 8.162
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD38", 
+    "sample_name_2": "BXD38", 
+    "se": 0.046, 
+    "value": 8.096
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD39", 
+    "sample_name_2": "BXD39", 
+    "se": 0.299, 
+    "value": 8.424
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD40", 
+    "sample_name_2": "BXD40", 
+    "se": 0.238, 
+    "value": 8.078
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD42", 
+    "sample_name_2": "BXD42", 
+    "se": 0.181, 
+    "value": 8.176
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD6", 
+    "sample_name_2": "BXD6", 
+    "se": 0.035, 
+    "value": 8.064
+  }, 
+  {
+    "data_id": 59278023, 
+    "sample_name": "BXD8", 
+    "sample_name_2": "BXD8", 
+    "se": 0.28, 
+    "value": 8.408
+  }
+]
