@@ -3,6 +3,7 @@
 # Script 6b
 
 import pandas as pd
+import numpy as np
 
 """
 Apply series of modifications to project_phenotype_file.bimbam to make it contain the same lines as project_genotype_file.bimbam
@@ -22,17 +23,20 @@ for x in read_lines:
     y=x.split(',')
     for z in y[1:]:
         u, v=z.split(':')
-        container[(y[0], u)]=float(z)
+        container[(y[0], u)]=float(v)
 
-row_names=[]
-col_names=[]
+row_names=set()
+col_names=set()
 
 for i in container.keys():
     a, b = i
-    row_names.append(a)
-    col_names.append(b)
+    row_names.add(a)
+    col_names.add(b)
 
-ori_pheno=pd.DataFrame(np.full((236, 19542), 0.0), index=row_names, columns=col_names, ) # 236 lines and 19542 unique pairs of trait and dataset id
+#print('size of row_names is: ', len(row_names))
+#print('size of col_names is: ', len(col_names))
+
+ori_pheno=pd.DataFrame(np.full((len(row_names), len(col_names)), np.nan), index=list(row_names), columns=list(col_names)) 
 
 for i in container.keys():
     a, b= i
@@ -46,7 +50,7 @@ for i in container.keys():
 
 ori_geno=pd.read_csv('../../processed_data/sample_BXD_genotype_file.csv', index_col=0)
 
-ori_geno_transposed=ori_geno.transpose(copy=True) # transpose dataframe to have lines on the rows
+ori_geno_transposed=ori_geno.transpose(copy=True).iloc[:, :-1] # transpose dataframe to have lines on the rows
 
 #print('Transposed genotype file: \n', ori_geno_transposed.head())
 
@@ -54,8 +58,6 @@ ori_geno_transposed=ori_geno.transpose(copy=True) # transpose dataframe to have 
 
 
 # 2. Remove lines in phenotype file not in genotype file
-
-
 
 list_lines_pheno=ori_pheno.index # get labels
 #print('Lines phenotype file: ', list_lines_pheno)
@@ -81,12 +83,12 @@ ori_pheno_trimmed=ori_pheno.drop(axis=0, labels=diff_to_remove) # remove lines n
 diff_to_add={}
 for j in list_lines_geno:
     if j not in list_lines_pheno:
-        diff_to_add[j]=[0 for rem in range(19542)] # default number of phenotypes in file is 19542
+        diff_to_add[j]=[np.nan for rem in range(len(col_names))] # default number of columns to number of phenotypes in file
 #print('Lines to add: ', diff_to_add.keys())
         
-lines_to_add=pd.DataFrame(diff_to_add)
+lines_to_add=pd.DataFrame(diff_to_add, columns=list(col_names), index=diff_to_add.keys())
 
-total=pd.concat([ori_pheno_trimmed, lines_to_add]).iloc[:, :-1] # add new lines to phenotype data
+total=pd.concat([ori_pheno_trimmed, lines_to_add]) # add new lines to phenotype data
 #print('Complete phenotype file: \n', total.head())
 
 
@@ -100,6 +102,19 @@ for l in list_lines_geno:
     
 final_transposed=final.transpose(copy=True) # need to transpose because lines on columns in dataframe final
 #print('Final transposed: \n', final_transposed.head())
+
+
+# 5. Check for non missing values
+
+num_notna=0
+for ad in final_transposed.columns:
+    if final_transposed[ad].notna().any():
+        num_notna +=1
+        #print(f'column {ad} has some non missing values')
+print('Number of columns with non missing values in final dataframe is: ', num_notna)
+        
+
+# 6. Save data
 
 final_transposed.to_csv('../../processed_data/project_trimmed_phenotype_file.bimbam') # save traits and lines names with data
 
