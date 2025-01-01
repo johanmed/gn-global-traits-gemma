@@ -23,7 +23,9 @@ def process_json_bimbam(json_filename, bimbam_filename):
     
     intro1, trait=json_contents[0].split(':')
     intro2, dataset=json_contents[1].split(':')
-    trait_dataset=trait.strip(' ')+'_'+dataset.strip(' ')
+    trait=trait.strip(' ').strip('\n')
+    dataset=dataset.strip(' ').strip('\n')
+    trait_dataset=trait+'_'+dataset
     
     container=[]
     
@@ -42,12 +44,12 @@ def process_json_bimbam(json_filename, bimbam_filename):
             if not (value_found1==None):
                 value_extract="".join(char for char in value_found1.string[-10:-1] if char.isdigit() or char=='.')
                 #print('value extract is ', value_extract)
-                container.append([strain_extract, value_extract])
+                container.append([strain_extract, trait_dataset, value_extract])
                 
             elif not(value_found2==None):
                 value_extract="".join(char for char in value_found2.string[-10:-1] if char.isdigit() or char=='.')
                 #print('value extract is ', value_extract)
-                container.append([strain_extract, value_extract])
+                container.append([strain_extract, trait_dataset, value_extract])
     
     #print('container is ', container)
     
@@ -62,7 +64,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
             
             old_string=(re.search(f'{a[0]}.*\n', bimbam2_contents).group())[:-1]
             #print('old string is ', old_string)
-            new_string=bimbam2_contents.replace(old_string, f'{old_string}, {trait_dataset}:{a[1]}')
+            new_string=bimbam2_contents.replace(old_string, f'{old_string}, {a[1]}:{a[2]}')
             #print('new string is ', new_string)
             
             bimbam1.write(f'{new_string}')
@@ -71,7 +73,7 @@ def process_json_bimbam(json_filename, bimbam_filename):
         else:
             
             bimbam1=open(bimbam_filename, 'a')
-            bimbam1.write(f'{a[0]}, {trait_dataset}:{a[1]}\n')
+            bimbam1.write(f'{a[0]}, {a[1]}:{a[2]}\n')
             bimbam1.close()
     
 
