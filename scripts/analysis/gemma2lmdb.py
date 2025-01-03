@@ -12,7 +12,7 @@ import lmdb
 from struct import *
 
 parser = argparse.ArgumentParser(description='Turn GEMMA assoc output into an lmdb db.')
-parser.add_argument('--db', default="../../output/project_02_01_24.mdb", help="DB name")
+parser.add_argument('--db', default="../../../project_02_01_24.mdb", help="DB name")
 parser.add_argument('--meta',required=False,help="JSON meta file name")
 parser.add_argument('files',nargs='*', help="GEMMA file(s)")
 args = parser.parse_args()
@@ -54,7 +54,7 @@ with lmdb.open(args.db,subdir=False) as env:
                         key = pack('>cLfff', chr_c, int(pos), float(se), float(l_mle), float(p_lrt))
                         val = pack('=fffffB100s', float(af), float(beta), float(se), float(l_mle), float(p_lrt), int(desc), bytes(full_desc, encoding='utf-8')) # Number of bytes of full_desc set to 100 by default
                         res = txn.put(key, bytes(val), dupdata=False, overwrite=False)
-                        print('insertion return value is', res)
+                        #print('insertion return value is', res)
                         if res:
                             if float(p_lrt) > 2.0:
                                 hits.append([chr, int(pos), rs, p_lrt])
@@ -69,7 +69,7 @@ with lmdb.open(args.db,subdir=False) as env:
                 else:
                     chr_c, pos, se, l_mle, p_lrt = unpack('>cLfff', key)
                     b_chr=unpack('c', chr_c)
-                    chr_num=ord(b_chr)
+                    chr_num=ord(b_chr[0])
                     #print('chromosome read is ', chr)
                     af, beta, se, l_mle, p_lrt, desc, b_full_desc= unpack('=fffffB100s', val)
                     full_desc=b_full_desc.decode('utf-8').strip('\x00')
