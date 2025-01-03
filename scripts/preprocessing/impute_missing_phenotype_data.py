@@ -8,7 +8,7 @@
 import pandas as pd
 import numpy as np
 
-# Read trait names in order
+# 1. Read trait names in order
 
 f1=open('../../processed_data/order_trait_names_phenotype_file.csv', 'r')
 order_traits=f1.readline().split(',') # get an array of the trait names in the same order as the phenotype file used
@@ -16,7 +16,7 @@ order_traits=f1.readline().split(',') # get an array of the trait names in the s
 #print(f'List of trait names has {len(order_trait_names)} elements')
 f1.close()
 
-# Read phenotype data in right order
+# 2. Read phenotype data in right order
 
 trimmed_BXD_data=pd.read_csv('../../processed_data/project_fully_trimmed_phenotype_file.bimbam', header=None, names=order_traits)
 trimmed_data=trimmed_BXD_data.copy()
@@ -39,7 +39,7 @@ def impute_missing_values(dataset):
     return new_dataset, features_out
 
     
-# Proceed to imputation
+# 3. Proceed to imputation
 
 imputed_data, new_order_traits=impute_missing_values(trimmed_data)
 imputed_BXD_data=pd.DataFrame(imputed_data)
@@ -47,12 +47,12 @@ print('Imputed data is \n', imputed_BXD_data.head())
 #print('New order trait names is: ', new_order_traits)
 #print('Number of traits kept after modification', len(new_order_traits))
 
-# Save new dataset
+# 4. Save new dataset
 
 imputed_BXD_data.to_csv("../../processed_data/project_imputed_phenotype_file.bimbam", index=False, header=False)
 
 
-# Save the new order of the trait names
+# 5. Save the new order of the trait names
 
 f2=open('../../processed_data/modified_order_trait_names_phenotype_file.csv', 'w')
 f2.write(','.join(order_traits))

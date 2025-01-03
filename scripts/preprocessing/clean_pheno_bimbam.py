@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Script 6b
+# Script 6
 
 import pandas as pd
 import numpy as np
@@ -48,11 +48,9 @@ for i in container.keys():
 
 # 1.2. Read genotype file
 
-ori_geno=pd.read_csv('../../processed_data/sample_BXD_genotype_file.csv', index_col=0)
+ori_geno=pd.read_csv('../../processed_data/original_BXD_genotypes_project.bimbam', index_col=0)
 
-ori_geno_transposed=ori_geno.transpose(copy=True).iloc[:, :-1] # transpose dataframe to have lines on the rows
-
-#print('Transposed genotype file: \n', ori_geno_transposed.head())
+#print('Column labels of transposed genotype are: \n', ori_geno.columns)
 
 
 
@@ -62,7 +60,7 @@ ori_geno_transposed=ori_geno.transpose(copy=True).iloc[:, :-1] # transpose dataf
 list_lines_pheno=ori_pheno.index # get labels
 #print('Lines phenotype file: ', list_lines_pheno)
 
-list_lines_geno=ori_geno_transposed.columns # same
+list_lines_geno=ori_geno.columns # same
 #print('Lines genotype file: ', list_lines_geno)
 
 diff_to_remove=[]
@@ -102,25 +100,17 @@ for l in list_lines_geno:
     
 final_transposed=final.transpose(copy=True) # need to transpose because lines on columns in dataframe final
 #print('Final transposed: \n', final_transposed.head())
+#print('Size of final', final_transposed.shape)
 
 
-# 5. Check for non missing values
-
-num_notna=0
-for ad in final_transposed.columns:
-    if final_transposed[ad].notna().any():
-        num_notna +=1
-        #print(f'column {ad} has some non missing values')
-print('Number of columns with non missing values in final dataframe is: ', num_notna)
-        
-
-# 6. Save data
+# 5. Save data
 
 final_transposed.to_csv('../../processed_data/project_trimmed_phenotype_file.bimbam') # save traits and lines names with data
 
 final_transposed.to_csv('../../processed_data/project_fully_trimmed_phenotype_file.bimbam', header=False, index=False) # save data without traits and lines names
 
 order_trait_names= final_transposed.columns # extract order of trait names for future referencing
+#print('Final trait names are: \n', order_trait_names)
 
 f=open('../../processed_data/order_trait_names_phenotype_file.csv', 'w')
 f.write(','.join(order_trait_names))
