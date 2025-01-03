@@ -1,0 +1,37 @@
+##
+## GEMMA Version    = 0.98.3 (2020-11-28)
+## Build profile    = 
+## GCC version      = 7.5.0
+## GSL Version      = 1.16
+## OpenBlas         = OpenBLAS 0.3.12  - OpenBLAS 0.3.21 DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=128
+##   arch           = Haswell
+##   threads        = 12
+##   parallel type  = threaded
+##
+## Command Line Input = gemma -p ../../processed_data/project_imputed_phenotype_file.bimbam -n 160 -g ../../processed_data/project_genotype_file.bimbam -a ../../processed_data/BXD_snps.txt -k output/bxd_relatedness.cXX.txt -lmm 1 -o bxd_association_trait160 
+##
+## Date = Fri Jan  3 06:33:37 2025
+##
+## Summary Statistics:
+## number of total individuals = 237
+## number of analyzed individuals = 237
+## number of covariates = 1
+## number of phenotypes = 1
+## number of total SNPs/var = 21055
+## number of analyzed SNPs/var = 21055
+## REMLE log-likelihood in the null model = -1110.28
+## MLE log-likelihood in the null model = -1114.49
+## pve estimate in the null model = 2.13131e-06
+## se(pve) in the null model = 0.061605
+## vg estimate in the null model = 0.00714308
+## ve estimate in the null model = 714.308
+## beta estimate in the null model =   19.9521
+## se(beta) =   1.73608
+##
+## Computation Time:
+## total computation time = 0.121056 min 
+## computation time break down: 
+##      time on eigen-decomposition = 0.00120147 min 
+##      time on calculating UtX = 0.0159306 min 
+##      time on optimization = 0.0475345 min 
+##

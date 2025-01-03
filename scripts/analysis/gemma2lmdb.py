@@ -12,7 +12,7 @@ import lmdb
 from struct import *
 
 parser = argparse.ArgumentParser(description='Turn GEMMA assoc output into an lmdb db.')
-parser.add_argument('--db', default="../../processed_data/project_02_01_24.mdb", help="DB name")
+parser.add_argument('--db', default="../../output/project_02_01_24.mdb", help="DB name")
 parser.add_argument('--meta',required=False,help="JSON meta file name")
 parser.add_argument('files',nargs='*', help="GEMMA file(s)")
 args = parser.parse_args()

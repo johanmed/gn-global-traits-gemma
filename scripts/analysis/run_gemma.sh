@@ -14,6 +14,6 @@
 
 for i in {1..587}; do 
     output="bxd_association_trait${i}"
-    gemma -p ../../processed_data/project_imputed_phenotype_file.bimbam -n $i -g ../../processed_data/project_genotype_file.bimbam -a ../../processed_data/BXD_snps.txt -k output/bxd_relatedness.cXX.txt -lmm 1 -o output/association/$output
+    gemma -p ../../processed_data/project_imputed_phenotype_file.bimbam -n $i -g ../../processed_data/project_genotype_file.bimbam -a ../../processed_data/BXD_snps.txt -k output/bxd_relatedness.cXX.txt -lmm 1 -o $output
 done
 

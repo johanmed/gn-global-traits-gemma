@@ -10,7 +10,7 @@ import os
 
 # 1. Read gemma files and sort
 
-gemma_files=[os.path.join('../../output/association/', i) for i in os.listdir('../../output/association/') if ('assoc' in i) and ('relevant' in i) and ('new' not in i)] # read files names from directory and store in array
+gemma_files=[os.path.join('output/association/', i) for i in os.listdir('output/association/') if ('assoc' in i) and ('relevant' in i) and ('new' not in i)] # read files names from directory and store in array
 gemma_files=sorted(gemma_files) # sort by names where the index after assoc is used
 
 # 2. Read new order of trait names
