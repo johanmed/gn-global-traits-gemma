@@ -59,7 +59,7 @@ with lmdb.open(args.db,subdir=False) as env:
                             if float(p_lrt) > 2.0:
                                 hits.append([chr, int(pos), rs, p_lrt])
                         else:
-                             print(f"WARNING: failed to update lmdb record with key {key} -- probably a duplicate {chr}:{pos} ({test_chr_c}:{test_pos})")
+                             print(f"WARNING: failed to update lmdb record with key {key} -- probably a duplicate {chr}:{pos}")
     with env.begin() as txn:
         with txn.cursor() as curs:
             # quick check and output of keys
@@ -78,7 +78,7 @@ with lmdb.open(args.db,subdir=False) as env:
 
     meta["hits"] = hits
     meta["log"] = log
-    print("HELLO: ",file=sys.stderr)
-    print(meta,file=sys.stderr)
+    #print("HELLO: ",file=sys.stderr)
+    #print(meta,file=sys.stderr)
     with env.begin(write=True) as txn:
         res = txn.put('meta'.encode(), json.dumps(meta).encode(), dupdata=False, overwrite=False)
