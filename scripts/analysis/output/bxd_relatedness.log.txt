@@ -1,0 +1,27 @@
+##
+## GEMMA Version    = 0.98.3 (2020-11-28)
+## Build profile    = 
+## GCC version      = 7.5.0
+## GSL Version      = 1.16
+## OpenBlas         = OpenBLAS 0.3.12  - OpenBLAS 0.3.21 DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=128
+##   arch           = Haswell
+##   threads        = 12
+##   parallel type  = threaded
+##
+## Command Line Input = gemma -g ../../processed_data/project_genotype_file.bimbam -p ../../processed_data/project_imputed_phenotype_file.bimbam -a ../../processed_data/BXD_snps.txt -gk 1 -o bxd_relatedness 
+##
+## Date = Fri Jan  3 03:58:19 2025
+##
+## Summary Statistics:
+## number of total individuals = 237
+## number of analyzed individuals = 237
+## number of covariates = 1
+## number of phenotypes = 1
+## number of total SNPs/var = 21055
+## number of analyzed SNPs/var = 21055
+##
+## Computation Time:
+## total computation time = 0.0838026 min 
+## computation time break down: 
+##      time on calculating relatedness matrix = 0.0590158 min 
+##
