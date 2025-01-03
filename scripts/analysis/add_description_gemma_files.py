@@ -2,26 +2,29 @@
 
 # Script 10
 
-# Add trait category and full description to association not inplace, after gemma files transformation
+# Add trait category and full description to association creating new files, after gemma files transformation
 
 
 import pandas as pd
 import os
+import re
 
 # 1. Read gemma files and sort
 
-gemma_files=[os.path.join('output/association/', i) for i in os.listdir('output/association/') if ('assoc' in i) and ('relevant' in i) and ('new' not in i)] # read files names from directory and store in array
+os.chdir('output/') # change to output directory for proper renaming
+
+gemma_files=[ i for i in os.listdir() if ('assoc' in i) and ('relevant' in i) and ('new' not in i) and ('log' not in i)] # read files names from directory and store in array
 gemma_files=sorted(gemma_files) # sort by names where the index after assoc is used
 
 # 2. Read new order of trait names
 
-order=open('../../processed_data/modified_order_trait_names_phenotype_file.csv')
+order=open('../../../processed_data/modified_order_trait_names_phenotype_file.csv')
 order_read=order.readline().split(',') # read contents of order file
 order.close()
 
 # 3. Read metadata
 
-info=open('../../processed_data/metadata_phenotype_info_file.json')
+info=open('../../../processed_data/metadata_phenotype_info_file.json')
 info_read=info.readlines() # read contents of metadata file
 info.close()
 
@@ -30,13 +33,21 @@ info.close()
 ordered_info_read=[]
 
 for traits in order_read:
-    for (ind, data) in enumerate(info_read):
+    for ind in range(len(info_read)-7):
+        data=info_read[ind]
+        #print('data is: ', data)
         trait_found=re.search('Trait', data)
-        trait_extract="".join(char for char in trait_found.string[9:] if char.isalnum())
-        if trait_extract in traits:
-            ordered_info_read.append(data[ind+7]) # add only the description line
+        if not (trait_found==None):
+            trait_extract="".join(char for char in trait_found.string[9:] if char.isalnum())
+            if trait_extract in traits:
+                proba_desc=info_read[ind+5:ind+7] # slice where description is expected
+                for desc in proba_desc:
+                    description_found=re.search('description', desc)
+                    if not (description_found==None):
+                        ordered_info_read.append(desc)# add only the description line
+                
             
-print('new metadata is: ', ordered_info_read)
+#print('new metadata is: ', ordered_info_read)
 
 # 5. Select the exact description
 
@@ -45,9 +56,10 @@ metadata=[] # metadata of phenotypes will be added in the order of the phenotype
 for line in ordered_info_read:
     description_found=re.search('description', line)
     description_extract= "".join(char for char in description_found.string[15:] if char.isalnum())
-    print('description extract is ', description_extract)
+    #print('description extract is ', description_extract)
     metadata.append(description_extract)
     
+#print('final metadata is: ', metadata)
 
 
 def add_desc_gemma_assoc(file, val1, val2):
@@ -74,14 +86,14 @@ def process_file(metadata, gemma_files, add_desc_gemma_assoc):
             o, p, q, r = f.split('_')
             l, m, n = r.split('.')
             if i==e and ('diabetes' in j or 'diabet' in j): # might need to add more keywords related to diabetes
-                print(f'Inferred diabetes trait for {f}')
+                #print(f'Inferred diabetes trait for {f}')
                 add_desc_gemma_assoc(f, 0, j)
             elif i==e and 'immune' in j: # might need to add more keywords related to immune system
-                print(f'Inferred Immune system trait for {f}')
+                #print(f'Inferred Immune system trait for {f}')
                 add_desc_gemma_assoc(f, 1, j)
             elif i==e and ('gut' in j or 'gastro' in j): # might need to add more keywords related to gastrointestinal system
-                print(f'Inferred Gut microbiome trait for {f}')
+                #print(f'Inferred Gut microbiome trait for {f}')
                 add_desc_gemma_assoc(f, 2, j)
 
 
-#process_file(info_read, gemma_files, add_desc_gemma_assoc)
+process_file(metadata, gemma_files, add_desc_gemma_assoc)
