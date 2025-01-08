@@ -56,7 +56,7 @@ metadata=[] # metadata of phenotypes will be added in the order of the phenotype
 
 for line in ordered_info_read:
     description_found=re.search('description', line)
-    description_extract= "".join(char for char in description_found.string[15:] if char.isalnum())
+    description_extract= "".join(char for char in description_found.string[15:] if char.isalnum() or char==' ')
     #print('description extract is ', description_extract)
     metadata.append(description_extract)
     
@@ -90,7 +90,7 @@ def process_file(metadata, gemma_files, add_desc_gemma_assoc):
             if i==int(l[5:]) and ('diabetes' in j or 'diabet' in j or 'diabetic' in j or 'leptin' in j or 'insulin' in j or 'gluc' in j): # might need to add more keywords related to diabetes
                 #print(f'Inferred diabetes trait for {f}')
                 add_desc_gemma_assoc(f, 0, j)
-            elif i==int(l[5:]) and ('immune' in j or 'immunity' in j or 'defensin' in j): # might need to add more keywords related to immune system
+            elif i==int(l[5:]) and ('immune' in j or 'immunity' in j or 'defensin' in j or 'innate' in j): # might need to add more keywords related to immune system
                 #print(f'Inferred Immune system trait for {f}')
                 add_desc_gemma_assoc(f, 1, j)
             elif i==int(l[5:]) and ('gut' in j or 'gastro' in j or 'gastric' in j or 'trypsin' in j): # might need to add more keywords related to gastrointestinal system

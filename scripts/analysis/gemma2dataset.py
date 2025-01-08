@@ -39,4 +39,4 @@ import pandas as pd
 
 df=pd.DataFrame(container, columns=['chr_num', 'pos', 'af', 'beta', 'se', 'l_mle', 'p_lrt', 'desc', 'full_desc'])
 
-df.to_csv('../../../../project_dataset_with_desc_full_desc.csv', index=False)
+df.to_csv('../../../project_dataset_with_desc_full_desc.csv', index=False)
