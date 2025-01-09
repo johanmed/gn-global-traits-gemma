@@ -96,6 +96,10 @@ def process_file(metadata, gemma_files, add_desc_gemma_assoc):
             elif i==int(l[5:]) and ('gut' in j or 'gastro' in j or 'gastric' in j or 'trypsin' in j): # might need to add more keywords related to gastrointestinal system
                 #print(f'Inferred Gut microbiome trait for {f}')
                 add_desc_gemma_assoc(f, 2, j)
+            elif i==int(l[5:]): # for traits with undetermined category
+                #print(f'Unable to infer category of trait for {f}')
+                add_desc_gemma_assoc(f, 3, j)
+                
 
 
 process_file(metadata, gemma_files, add_desc_gemma_assoc)
