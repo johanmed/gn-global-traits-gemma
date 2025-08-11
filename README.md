@@ -1,7 +1,7 @@
-This repo is an extension of PhenoGemmaVectorDatabase repository where data has been obtained from global search in GN
+# Description
+This repo is an extension of gn-traits-gemma repository where data has been obtained from global search in GN. It uses files from global search on GN to create a vector database for project
 
-Uses files from global search on GN to create a vector database for project
-
-Tools required
+# Requirements
 - GEMMA
 - LMDB
+- GNApi
